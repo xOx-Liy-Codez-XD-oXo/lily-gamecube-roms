@@ -24,3 +24,7 @@ Lily skate with no sound
 <img width="720" height="480" alt="ID-trianglefan720_2026-04-02_10-46-39" src="https://github.com/user-attachments/assets/2cd07253-a114-45df-8ea7-716f83da36a0" />
 
 Test of 720x480 rendering with multiple EFB copy
+## pixellightinggc
+<img width="640" height="480" alt="ID-pixellightinggc_2026-04-14_11-15-11" src="https://github.com/user-attachments/assets/b98087cb-2cd3-4c4e-a7a5-ef48db5ea10f" />
+
+Approximation of pixel lighting with texcopy and texgen
