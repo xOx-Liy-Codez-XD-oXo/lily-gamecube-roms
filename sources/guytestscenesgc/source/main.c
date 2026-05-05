@@ -556,7 +556,12 @@ int main(int argc,char **argv) {
 		if(wbuttonsdown & WPAD_BUTTON_HOME) pleaseexit++;*/
 
 		//gc
-		int gcconnected = PAD_ScanPads();
+		u32 connected = PAD_ScanPads();
+		u32 whichcon; //use first connected controler
+		if(connected & 1) whichcon = 0; 
+		else if (connected & 2) whichcon = 1;
+		else if (connected & 4) whichcon = 2;
+		else if (connected & 8) whichcon = 3;
 		int gbuttonsheld = 0;
 		int gbuttonsdown = 0;
 
@@ -581,8 +586,8 @@ int main(int argc,char **argv) {
 
 
 			if(gcconnected) {
-				gbuttonsheld = PAD_ButtonsHeld(0);
-				gbuttonsdown = PAD_ButtonsDown(0);
+				gbuttonsheld = PAD_ButtonsHeld(whichcon);
+				gbuttonsdown = PAD_ButtonsDown(whichcon);
 				if(gbuttonsdown & PAD_BUTTON_START) pleaseexit++;
 				if(gbuttonsdown & PAD_BUTTON_A) whichtestframe++;
 				if(gbuttonsdown & PAD_BUTTON_B) whichtestframe--;
