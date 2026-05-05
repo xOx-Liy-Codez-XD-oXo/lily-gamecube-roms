@@ -556,12 +556,12 @@ int main(int argc,char **argv) {
 		if(wbuttonsdown & WPAD_BUTTON_HOME) pleaseexit++;*/
 
 		//gc
-		u32 connected = PAD_ScanPads();
+		u32 gcconnected = PAD_ScanPads();
 		u32 whichcon; //use first connected controler
-		if(connected & 1) whichcon = 0; 
-		else if (connected & 2) whichcon = 1;
-		else if (connected & 4) whichcon = 2;
-		else if (connected & 8) whichcon = 3;
+		if(gcconnected & 1) whichcon = 0; 
+		else if (gcconnected & 2) whichcon = 1;
+		else if (gcconnected & 4) whichcon = 2;
+		else if (gcconnected & 8) whichcon = 3;
 		int gbuttonsheld = 0;
 		int gbuttonsdown = 0;
 
